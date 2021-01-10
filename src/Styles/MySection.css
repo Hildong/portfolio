@@ -1,0 +1,70 @@
+/* MY SECTION STYLING */
+
+.picture-of-me {
+    border-radius: 50%;
+    -webkit-box-shadow: 1px 1px 5px 3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 1px 1px 5px 3px rgba(0,0,0,0.45);
+    box-shadow: 1px 1px 5px 3px rgba(0,0,0,0.45);
+    display: block;
+}
+
+.my-name {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.profession {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+    padding-top: 5px;
+    color: rgb(30, 121, 30);
+}
+
+.profession span {
+    color: rgb(116, 240, 116);
+    text-decoration: underline;
+}
+
+/**/
+
+
+/* MOBILE STYLING */
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    .short-about-me {
+        height: 85%;
+        width: 60vw;
+        display: inline-block;
+        margin-left: 7vw;
+        text-align: center;
+        border-bottom: 1px solid rgba(0,0,0,0.45);
+    }
+    .picture-of-me {
+        height: 100px;
+        width: 100px;
+        margin: 15px auto;
+    }
+    .my-section {
+        width: 97vw;
+        height: 35vh;
+        background-color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin: 5px auto;
+        border-bottom: 1px solid black;
+    }
+    .my-social-stuff {
+        width: 13vw;
+        height: 62%;
+        display: inline-block;
+        border-right: 1px solid rgba(0, 0, 0, 0.233);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.233);
+    }
+    .link-img {
+        width: 12.5vw;
+        height: 12.5vw;
+        margin-top: 5px;
+    }
+}
+
+/**/

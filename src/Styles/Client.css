@@ -1,0 +1,8 @@
+/* BACKGROUND COLOR FOR CLIENT SIDE */
+.client-background {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: rgb(149,232,104);
+    background: linear-gradient(to right, rgba(149,232,104,1) 20%, rgba(3,107,22,1) 86%);
+}

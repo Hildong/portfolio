@@ -1,0 +1,224 @@
+/* ADMIN PAGE STYLING */
+
+/**/
+
+/* MOBILE STYLING */
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    .admin-navbar {
+        width: 100vw;
+        height: 20vw;
+        color: rgb(255, 255, 255);
+        background-color: rgba(70, 70, 70, 0.85);
+        border-bottom: 1px solid black;
+        -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.55);
+        -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.55);
+        box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.55);
+        overflow: hidden;
+    }
+    .admin-navbar h1 {
+        margin-top: 2vh;
+        padding-left: 2vw;
+        display: inline-block;
+    }
+    .logout-btn  {
+        display: inline-block;
+        margin-left: 17vw;
+        width: 20vw;
+        border-radius: 5px;
+        border: none;
+        height: 4vh;
+        -webkit-box-shadow: 5px 4px 5px 0px rgba(0,0,0,1);
+        -moz-box-shadow: 5px 4px 5px 0px rgba(0,0,0,1);
+        box-shadow: 5px 4px 5px 0px rgba(0,0,0,1);
+    }
+    /**/
+    .admin-page {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    .admin-page h1 {
+        margin-top: 5vh;
+        font-size: 1.5rem;
+        color: white;
+        font-family: monospace;
+        margin-left: 2vw;
+        display: inline-block;
+    }
+    .add-project-btn {
+        display: inline-block;
+        margin-left: 18vw;
+        width: 25vw;
+        border-radius: 5px;
+        border: none;
+        height: 5vh;
+        -webkit-box-shadow: 5px 4px 5px 0px rgba(0,0,0,1);
+        -moz-box-shadow: 5px 4px 5px 0px rgba(0,0,0,1);
+        box-shadow: 5px 4px 5px 0px rgba(0,0,0,1);
+    }
+    .projects-showcase {
+        width: 95vw;
+        height: 70vh;
+        overflow-y: scroll;
+        border: 1px solid black;
+        margin: 1vh auto;
+    }
+
+    /**/
+    .add-project-div {
+        height: 80vh;
+        width: 90vw;
+        position: absolute;
+        z-index: 10000;
+        margin-top: -10vh;
+        margin-left: 5vw;
+        background-color: rgb(17, 17, 17);
+        border-radius: 15px;
+    }
+    .add-project-div h1 {
+        display: block;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .image-input {
+        color: white;
+    }
+    .add-project-div input {
+        width: 65%;
+        height: 4vh;
+        display: block;
+        margin: 1vh auto;
+    }
+    .add-project-div textarea {
+        resize: none;
+        display: block;
+        margin: 1.5vh auto;
+        width: 75%;
+        height: 10vh;
+    }
+    .add-project-div .upload-project {
+        margin: 10vh auto;
+        display: block;
+    }
+    .close-add-project-div {
+        background-color: white;
+        float: right;
+        height: 3vh;
+        width: 6vw;
+        border-radius: 10px;
+        text-align: center;
+        font-family: monospace;
+        margin-right: 5px;
+        margin-top: 5px;
+        padding-top: 1vh;
+    }
+    .loader {
+        border: 7px solid rgb(17, 17, 17);
+        border-radius: 50%;
+        border-top: 7px solid #3498db;
+        margin: -5vh auto;
+        width: 10vw;
+        height: 10vw;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+    }
+    
+    /**/
+    .loader-div-for-project-load {
+        margin-top: 30vh;
+    }
+
+    .project-div {
+        width: 90vw;
+        margin: 10px auto;
+        height: 300px;
+        border: 1px solid white;
+        position: relative;
+    } 
+    .project-div img {
+        position: absolute;
+        height: 300px;
+        width: 90vw;
+    }
+    .project-div div {
+        position: relative;
+        height: 40%;
+        top: 60%;
+        color: white;
+        z-index: 100;
+        background-color: rgba(58, 57, 57, 0.884);
+    }
+    .project-name {
+        font-size: 1.5rem;
+        text-decoration: underline;
+    }
+    .project-tags {
+        display: inline-block;
+        background-color: #3498db;
+        font-size: .9rem;
+        min-width: 65px;
+        width: auto;
+        text-align: center;
+        margin-left: 1px;
+        margin-top: 5px;
+        border-radius: 10px;
+    }
+    .project-description {
+        margin-top: 5px;
+        display: block;
+    }
+    .delete-btn  {
+        position: absolute;
+        color: red;
+        display: inline-block;
+        width: 20%;
+        height: 10%;
+        right: 0;
+    }
+
+    /**/
+    .delete-project-div {
+        position: absolute;
+        z-index: 5000;
+        background-color: black;
+        border-radius: 15px;
+        width: 80%;
+        margin-left: 10%;
+        height: 45vh;
+    }
+    .delete-project-header {
+        text-align: center;
+    }
+    .delete-project-btn {
+        display: block;
+        color: red;
+        width: 40%;
+        font-weight: bold;
+        height: 50px;
+        margin: 5vh auto;
+    }
+    .delete-project-loader {
+        margin-top: 5vh;
+    }
+}
+
+/**/
+
+
+/* ANIMATIONS */
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+      
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/**/
