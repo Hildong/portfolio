@@ -4,7 +4,7 @@ import firebase from 'firebase'
 import { useEffect, useRef, useState } from 'react';
 
 //Set the URL of the web application on top of the file so I don't have to look everywhere in the code when I wanna change it
-const URL = "http://192.168.0.36:3000/"
+const URL = "http://192.168.147.147:3000/"
 
 function Admin() {
 

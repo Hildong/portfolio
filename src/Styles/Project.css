@@ -1,5 +1,12 @@
 /* PROJECT PAGE STYLING */
 
+.project-header {
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: underline;
+    font-family: monospace;
+}
+
 /**/
 
 /* MOBILE PAGE STYLING */
@@ -12,7 +19,7 @@
     }
     .project-div-client {
         width: 90vw;
-        margin: 10px auto;
+        margin: 20px auto;
         height: 300px;
         border: 1px solid black;
         border-radius: 10px;
@@ -66,4 +73,68 @@
         animation: spin 2s linear infinite;
     }
 
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 480px) and (max-width: 600px) {
+        /**/
+        .projects-body {
+            overflow-y: scroll;
+            margin-top: 5.5px;
+        }
+        .project-div-client {
+            width: 85vw;
+            margin: 10px auto;
+            height: 280px;
+            border: 1px solid black;
+            border-radius: 10px;
+            position: relative;
+        } 
+        .project-div-client img {
+            border-radius: 10px;
+            position: absolute;
+            height: 280px;
+            width: 85vw;
+        }
+        .project-div-client div {
+            position: relative;
+            height: 40%;
+            top: 60%;
+            color: white;
+            z-index: 100;
+            background-color: rgba(58, 57, 57, 0.884);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .project-name-client {
+            font-size: 1.5rem;
+            text-decoration: underline;
+        }
+        .project-tags-client {
+            display: inline-block;
+            background-color: #36aa53;
+            font-size: .9rem;
+            min-width: 65px;
+            width: auto;
+            text-align: center;
+            margin-left: 1px;
+            margin-top: 5px;
+            border-radius: 10px;
+        }
+        .project-description-client {
+            margin-top: 5px;
+            display: block;
+        }
+    
+        /**/
+        .project-client-loader {
+            border: 7px solid rgb(17, 17, 17);
+            border-radius: 50%;
+            border-top: 7px solid #3498db;
+            margin: 10vh auto;
+            width: 10vw;
+            height: 10vw;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 2s linear infinite;
+        }
 }

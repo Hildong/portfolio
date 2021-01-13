@@ -56,6 +56,7 @@ function Projects() {
         <MySection />
         <Navbar />
         <div className="content-body projects-body">
+          <h1 className="project-header">Projects</h1>
           <div ref={loadingAnimationRef} className="project-client-loader"></div>
           {
               projectsObj.map(value => {

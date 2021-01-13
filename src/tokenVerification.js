@@ -2,6 +2,8 @@
 const JWT = require("jsonwebtoken");
 require("dotenv").config()
 
+const URL = "http://192.168.147.147:3000/";
+
 module.exports = function () {
     //Obtain token from request header and use split as well as substring token, to remove everything not part of the token
     let token = undefined
@@ -11,7 +13,7 @@ module.exports = function () {
     //console.log(authHeader)
     if(authHeader !== undefined) {
         token = authHeader;
-    } else if(token === null || token === undefined) return window.location.href = "http://192.168.0.38:3000/login";
+    } else if(token === null || token === undefined) return window.location.href = `${URL}login`;
 
     JWT.verify(token, process.env.REACT_APP_SECRET_TOKEN, (err, user) => {
         if(err) {

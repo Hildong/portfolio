@@ -68,3 +68,42 @@
 }
 
 /* */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 480px) and (max-width: 600px) {
+    .navbar {
+        width: 97vw;
+        height: 5vh;
+        margin: -5px auto;
+    }
+    .navbar-ul {
+        display: flex;
+    }
+    .navbar-link {
+        text-align: center;
+        width: 33.333%;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+    /**/
+    .contact-form-in-nav {
+        position: absolute;
+        overflow-y: scroll;
+        margin-top: -20vh;
+        z-index: 10000;
+        height: 55vh;
+        width: 76vw;
+        margin-left: 12.25vw;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, .5);
+    }
+    .close-contact-form {
+        font-size: 1.5rem;
+        width: 50px;
+        float: right;
+        border-bottom-left-radius: 5px;
+        border: none;
+        background-color: white;
+    }
+}
+/**/

@@ -40,8 +40,8 @@
         border-bottom: 1px solid rgba(0,0,0,0.45);
     }
     .picture-of-me {
-        height: 100px;
-        width: 100px;
+        height: 40%;
+        width: 40%;
         margin: 15px auto;
     }
     .my-section {
@@ -68,3 +68,41 @@
 }
 
 /**/
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 480px) and (max-width: 600px) {
+    .short-about-me {
+        height: 80%;
+        width: 60vw;
+        display: inline-block;
+        margin-left: 7vw;
+        text-align: center;
+        border-bottom: 1px solid rgba(0,0,0,0.45);
+    }
+    .picture-of-me {
+        height: 45%;
+        width: 35%;
+        margin: 25px auto;
+    }
+    .my-section {
+        width: 97vw;
+        height: 45vh;
+        background-color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin: 5px auto;
+        border-bottom: 1px solid black;
+    }
+    .my-social-stuff {
+        width: 13vw;
+        height: 62%;
+        display: inline-block;
+        border-right: 1px solid rgba(0, 0, 0, 0.233);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.233);
+    }
+    .link-img {
+        width: 9.5vw;
+        height: 9.5vw;
+        margin-top: 5px;
+    }  
+}

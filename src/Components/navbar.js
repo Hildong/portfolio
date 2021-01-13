@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react';
 import ContactMobile from '../Components/contactMobile.js';
 import '../Styles/Navbar.css';
 
-const URL = "http://192.168.0.36:3000";
+const URL = "http://192.168.147.147:3000";
 
 function Navbar() {
 

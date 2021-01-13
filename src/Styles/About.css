@@ -1,0 +1,88 @@
+/* ABOUT STYLING */
+
+.about-header {
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: underline;
+    font-family: monospace;
+}
+
+/**/
+
+/* MOBILE ABOUT STYLING */
+
+@media screen and (min-width: 320px) and (max-width: 479px)  {
+    .about-me-text {
+        width: 90%;
+        margin: 2vh auto;
+    }
+    .about-me-text h1 {
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: lighter;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .about-me-text p {
+        font-size: .9rem;
+        text-align: center;
+        font-weight: 300;
+        margin-top: 12px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .tech-stack {
+        height: 50px;
+        margin-top: 10px;
+        font-size: .8rem;
+    }
+    .tech-stack .left {
+        display: inline-block;
+        width: 37%;
+        margin-left: 18%;
+    }
+    .tech-stack .right {
+        height: 50px;
+        width: 44%;
+        display: inline-block;
+    }
+}
+
+/* */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 480px) and (max-width: 600px) {
+    .about-me-text {
+        width: 90%;
+        margin: 2vh auto;
+    }
+    .about-me-text h1 {
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: 300;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .about-me-text p {
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 300;
+        margin-top: 12px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .tech-stack {
+        height: 50px;
+        margin-top: 30px;
+        font-size: 1rem;
+    }
+    .tech-stack .left {
+        display: inline-block;
+        width: 35%;
+        margin-left: 21%;
+    }
+    .tech-stack .right {
+        height: 50px;
+        width: 44%;
+        display: inline-block;
+    }
+    .about-me-hr {
+        margin-top: 2vh;
+    }
+}
