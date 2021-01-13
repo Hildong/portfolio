@@ -1,10 +1,112 @@
 /* PROJECT PAGE STYLING */
 
+@media screen and (min-width: 1000px) {
+    .my-section-div {
+        width: 20vw;
+        display: inline-block;
+        margin-left: 20vw;
+        margin-top: 20vh;
+        position: absolute;
+    }
+    
+    .navbar-and-project-div {
+        display: inline-block;
+        height: 40vh;
+        width: 40vh;
+        margin-left: 40.1vw;
+        margin-top: 22vh;
+    }
+}
+
+.project-div-client {
+    height: 35vh;
+    width: 80%;
+    margin: 2vh auto;
+}
+
+.project-div-client img {
+    border: 1px solid rgba(0, 0, 0, 0.452);
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 .project-header {
     text-align: center;
     padding-top: 10px;
     text-decoration: underline;
     font-family: monospace;
+}
+
+.project-div-client .project-info {
+    position: relative;
+    height: 40%;
+    top: -41%;
+    color: white;
+    width: 99.5%;
+    z-index: 100;
+    background-color: rgba(58, 57, 57, 0.884);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 5px;
+}
+
+.project-name-client {
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.project-tags-client {
+    display: inline-block;
+    background-color: #36aa53;
+    font-size: .9rem;
+    min-width: 65px;
+    width: auto;
+    text-align: center;
+    margin-left: 1px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.project-description-client {
+    margin-top: 5px;
+    display: block;
+}
+
+.visit-website-btn {
+    position: absolute;
+    margin-top: -35vh;
+    z-index: 50000000;
+}
+
+.visit-website-btn button {
+    background-color: rgb(30, 192, 92);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: -4px;
+    margin-left: 2px;
+    width: 70px;
+    height: 30px;
+    float: right;
+    transition: .3s;
+}
+
+.visit-website-btn button:hover {
+    background-color: rgb(103, 219, 147);
+}
+
+/**/
+.project-client-loader {
+    border: 7px solid rgb(17, 17, 17);
+    border-radius: 50%;
+    border-top: 7px solid #3498db;
+    margin: 10vh auto;
+    width: 10vw;
+    height: 10vw;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
 }
 
 /**/
@@ -31,10 +133,10 @@
         height: 300px;
         width: 90vw;
     }
-    .project-div-client div {
+    .project-div-client .project-info {
         position: relative;
-        height: 40%;
-        top: 60%;
+        height: 51%;
+        top: 50%;
         color: white;
         z-index: 100;
         background-color: rgba(58, 57, 57, 0.884);
@@ -76,7 +178,7 @@
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 480px) and (max-width: 600px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
         /**/
         .projects-body {
             overflow-y: scroll;
@@ -96,10 +198,10 @@
             height: 280px;
             width: 85vw;
         }
-        .project-div-client div {
+        .project-div-client .project-info {
             position: relative;
-            height: 40%;
-            top: 60%;
+            height: 51%;
+            top: 50%;
             color: white;
             z-index: 100;
             background-color: rgba(58, 57, 57, 0.884);
@@ -137,4 +239,68 @@
             -webkit-animation: spin 2s linear infinite; /* Safari */
             animation: spin 2s linear infinite;
         }
+}
+
+/* (large tablets, 768px and up) */
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+    .projects-body {
+        overflow-y: scroll;
+        height: 57vh;
+        margin-top: 5.5px;
+    }
+    .project-div-client {
+        width: 85vw;
+        margin: 10px auto;
+        height: 350px;
+        border: 1px solid black;
+        border-radius: 10px;
+        position: relative;
+    } 
+    .project-div-client img {
+        border-radius: 10px;
+        position: absolute;
+        height: 280px;
+        width: 85vw;
+    }
+    .project-div-client .project-info {
+        position: relative;
+        height: 51%;
+        top: 50%;
+        color: white;
+        z-index: 100;
+        background-color: rgba(58, 57, 57, 0.884);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .project-name-client {
+        font-size: 1.5rem;
+        text-decoration: underline;
+    }
+    .project-tags-client {
+        display: inline-block;
+        background-color: #36aa53;
+        font-size: .9rem;
+        min-width: 65px;
+        width: auto;
+        text-align: center;
+        margin-left: 1px;
+        margin-top: 5px;
+        border-radius: 10px;
+    }
+    .project-description-client {
+        margin-top: 5px;
+        display: block;
+    }
+
+    /**/
+    .project-client-loader {
+        border: 7px solid rgb(17, 17, 17);
+        border-radius: 50%;
+        border-top: 7px solid #3498db;
+        margin: 10vh auto;
+        width: 10vw;
+        height: 10vw;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+    }
 }

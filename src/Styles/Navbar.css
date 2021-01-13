@@ -2,12 +2,27 @@
 
 .navbar {
     background-color: white;
+    width: 40vw;
+    height: 5vh;
+    position: relative;
 }
+
 
 /* */
 
 
 /* NAVBAR link stylings */
+
+.navbar-ul {
+    display: flex;
+}
+.navbar-link {
+    text-align: center;
+    width: 33.333%;
+    padding-top: 1vh;
+    cursor: pointer;
+    padding-bottom: 1vh;
+}
 
 .navbar-link {
     color: black;
@@ -70,7 +85,7 @@
 /* */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 480px) and (max-width: 600px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
     .navbar {
         width: 97vw;
         height: 5vh;
@@ -107,3 +122,40 @@
     }
 }
 /**/
+
+/* (large tablets, 768px and up) */
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+    .navbar {
+        width: 97vw;
+        height: 5vh;
+        margin: -5px auto;
+    }
+    .navbar-ul {
+        display: flex;
+    }
+    .navbar-link {
+        text-align: center;
+        width: 33.333%;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+    /**/
+    .contact-form-in-nav {
+        position: absolute;
+        margin-top: -20vh;
+        z-index: 10000;
+        height: 35vh;
+        width: 76vw;
+        margin-left: 12.25vw;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, .5);
+    }
+    .close-contact-form {
+        font-size: 1.5rem;
+        width: 50px;
+        float: right;
+        border-bottom-left-radius: 5px;
+        border: none;
+        background-color: white;
+    }
+}

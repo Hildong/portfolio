@@ -4,8 +4,6 @@ import linkedInPicture from '../pictures/linkedin.png';
 import upworkPicture from '../pictures/upwork.png';
 import githubPicture from '../pictures/github.png';
 
-const URL = "http://192.168.147.147:3000/"
-
 function MySection() {
   return (
     <div className="my-section">
@@ -17,7 +15,7 @@ function MySection() {
         <div className="short-about-me">
             <img alt="Philip Hilding" src={pictureOfme} className="picture-of-me"/>
             <p className="my-name">Philip Hilding</p>
-            <p className="profession">Fullstack developer with {new Date().getFullYear() - 2019}+ years experience with the MERN stack. Read more <span onClick={() => window.location.href = `${URL}about`}>here</span>.</p>
+            <p className="profession">Fullstack developer with {new Date().getFullYear() - 2019}+ years experience with the MERN stack. Read more <span onClick={() => window.location.href = `${process.env.REACT_APP_URL}/about`}>here</span>.</p>
         </div>
     </div>
   );

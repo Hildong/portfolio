@@ -37,7 +37,9 @@ function Projects() {
                           projectDescription: snapshotData.val().projectDescription,
                           projectImageUrl: snapshotData.val().projectImageURL,
                           projectID: snapshotData.val().projectID,
-                          projectImageName: snapshotData.val().projectImageName
+                          projectImageName: snapshotData.val().projectImageName,
+                          projectVisitUrl: snapshotData.val().projectURL,
+                          projectGithubUrl: snapshotData.val().projectGithubURL
                       }])
                   })
               }
@@ -53,33 +55,44 @@ function Projects() {
 
     return (
       <div className="client-background">
-        <MySection />
-        <Navbar />
-        <div className="content-body projects-body">
-          <h1 className="project-header">Projects</h1>
-          <div ref={loadingAnimationRef} className="project-client-loader"></div>
-          {
-              projectsObj.map(value => {
-                  //Create an array of the tags from the database string with split method
-                  let arrayOfTags = value.projectTags.split('.')
-                  return <div className="project-div-client" key={value.projectName}>
-                            <img alt="project portrait" src={value.projectImageUrl}/>
-                            <div>
-                              <p className="project-name-client">{value.projectName}</p>
-                                {
-                                  //Use the map method to loop through elements in array and return them
-                                    arrayOfTags.map(tag => {
-                                      return <span className="project-tags-client">
-                                                { tag }
-                                              </span>
-                                    })
-                                }
-                              <i className="project-description-client">{value.projectDescription}</i>
+
+        <div className="my-section-div">
+          <MySection />
+        </div>
+
+        <div className="navbar-and-project-div">
+          <Navbar />
+          <div className="content-body projects-body">
+            <h1 className="project-header">Projects</h1>
+            <div ref={loadingAnimationRef} className="project-client-loader"></div>
+            {
+                projectsObj.map(value => {
+                    //Create an array of the tags from the database string with split method
+                    let arrayOfTags = value.projectTags.split('.')
+                    return <div className="project-div-client" key={value.projectName}>
+                              <img alt="project portrait" src={value.projectImageUrl}/>
+                              <div className="visit-website-btn">
+                                <button onClick={() => window.open(value.projectVisitUrl, "_blank")}>Visit</button>
+                                <button onClick={() => window.open(value.projectGithubUrl, "_blank")}>Github</button>
+                              </div>
+                              <div className="project-info">
+                                <p className="project-name-client">{value.projectName}</p>
+                                  {
+                                    //Use the map method to loop through elements in array and return them
+                                      arrayOfTags.map(tag => {
+                                        return <span className="project-tags-client">
+                                                  { tag }
+                                                </span>
+                                      })
+                                  }
+                                <i className="project-description-client">{value.projectDescription}</i>
+                              </div>
                             </div>
-                          </div>
-              })
-            }
+                })
+              }
           </div>
+        </div>
+
       </div>
     );
 

@@ -1,8 +1,6 @@
 import tokenVerification from '../../tokenVerification.js';
 import Admin from './Admin.js';
 
-const URL = "http://192.168.147.147:3000"
-
 function loginTokenCheck() {
 
   return (
@@ -11,7 +9,7 @@ function loginTokenCheck() {
             tokenVerification() ? (
               <Admin />
             ) : (
-              window.location.href = `${URL}/login`
+              window.location.href = `${process.env.REACT_APP_URL}/login`
             )
         }
     </div>

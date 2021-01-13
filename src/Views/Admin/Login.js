@@ -3,10 +3,6 @@ import JWT from 'jsonwebtoken'
 import '../../Styles/Login.css';
 require('dotenv').config()
 
-/*Assign the URL at the top, so I can change it here whenever I need to change it instead of looking for where to change
-it all over my code*/
-const URL = "http://192.168.147.147:3000/"
-
 function Login() {
 
   //Create a state object which will hold login credentials 
@@ -27,7 +23,7 @@ function Login() {
       //Save token in a cookie named token
       document.cookie = `token=${token}`
       //Redirect to location below
-      window.location.href = URL+"admin"
+      window.location.href = process.env.REACT_APP_URL+"/admin"
 
     } else {
       //Alert a message saying the login credentials are wrong 
@@ -44,7 +40,7 @@ function Login() {
           <input placeholder="Admin password" type="password" onChange={(e) => setUserObj(prevState => ({...prevState, password: e.target.value}))}/>
           <button className="login-btn" onClick={() => login()}>Login</button>
         </div>
-        <button className="back-to-portfolio" onClick={() => window.location.href = `${URL}`}>Back To Portfolio</button>
+        <button className="back-to-portfolio" onClick={() => window.location.href = `${process.env.REACT_APP_URL}`}>Back To Portfolio</button>
     </div>
   );
 

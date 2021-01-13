@@ -2,8 +2,6 @@ import React, {useEffect, useRef} from 'react';
 import ContactMobile from '../Components/contactMobile.js';
 import '../Styles/Navbar.css';
 
-const URL = "http://192.168.147.147:3000";
-
 function Navbar() {
 
     //Initializing variables with useRef which will be used to change styling depending on the page the user is visiting
@@ -44,7 +42,11 @@ function Navbar() {
     
     //Function to set contactForms display to block
     const displayContactForm = () => {
-        contactForm.current.style.display = "block";
+        if(window.innerWidth > 991) {
+            window.location.href = `${process.env.REACT_APP_URL}/contact`
+        } else {
+            contactForm.current.style.display = "block";
+        }
     }
 
     //Function to set contactForms display to none
@@ -56,8 +58,8 @@ function Navbar() {
         <div className="navbar">
             <ul className="navbar-ul">
                 <p className="navbar-link" ref={contact} onClick={() => displayContactForm()}>Contact</p>
-                <a className="navbar-link" ref={projects} href={`${URL}/projects`}>Projects</a>
-                <a className="navbar-link" ref={about} href={`${URL}/about`}>About</a>
+                <a className="navbar-link" ref={projects} href={`${process.env.REACT_APP_URL}/projects`}>Projects</a>
+                <a className="navbar-link" ref={about} href={`${process.env.REACT_APP_URL}/about`}>About</a>
             </ul>
             <div ref={contactForm} className="contact-form-in-nav">
                 <button className="close-contact-form" onClick={() => hideContactForm()}>x</button>

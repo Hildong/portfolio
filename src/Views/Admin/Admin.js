@@ -3,8 +3,6 @@ import { firebaseApp } from '../../firebase/firebase.js';
 import firebase from 'firebase'
 import { useEffect, useRef, useState } from 'react';
 
-//Set the URL of the web application on top of the file so I don't have to look everywhere in the code when I wanna change it
-const URL = "http://192.168.147.147:3000/"
 
 function Admin() {
 
@@ -18,7 +16,9 @@ function Admin() {
         projectName: "",
         projectTags: "",
         projectID: "",
-        projectDescription: ""
+        projectDescription: "",
+        projectURL: "",
+        projectGithubURL: ""
     })
 
     //Create a state varaible for saving info about each projects
@@ -105,6 +105,8 @@ function Admin() {
                     projectDescription: projectObj.projectDescription,
                     projectImageURL: imageUrl,
                     projectImageName: file.name,
+                    projectURL: projectObj.projectURL,
+                    projectGithubURL: projectsObj.projectGithubURL,
                     timestamp: firebase.firestore.Timestamp.fromDate(new Date())
                 })
             })
@@ -123,7 +125,7 @@ function Admin() {
         //Clear cookie holding token
         document.cookie = `token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
         //Redirect to url below
-        window.location.href = URL +"login"
+        window.location.href = process.env.REACT_APP_URL +"/login"
     }
 
 
@@ -141,7 +143,7 @@ function Admin() {
 
         //When both are deleted, stop animation and reload site
         deleteProjectLoadingAnimationRef.current.style.display = "none";
-        window.location.href = `${URL}admin`;
+        window.location.href = `${process.env.REACT_APP_URL}/admin`;
     } 
 
     //This function displayed the 'Add project div'
@@ -197,6 +199,8 @@ function Admin() {
                     <input required placeholder="Project Name" onChange={e => setProjectObj(prevState => ({...prevState, projectName: e.target.value}))}/>
                     <input required placeholder="Project Tags" onChange={e => setProjectObj(prevState => ({...prevState, projectTags: e.target.value}))}/>
                     <input required placeholder="Project ID" onChange={e => setProjectObj(prevState => ({...prevState, projectID: e.target.value}))}/>
+                    <input required placeholder="Project URL" onChange={e => setProjectObj(prevState => ({...prevState, projectURL: e.target.value}))}/>
+                    <input required placeholder="Project Github URL" onChange={e => setProjectObj(prevState => ({...prevState, projectGithubURL: e.target.value}))}/>
                     <textarea required placeholder="Project Description" onChange={e => setProjectObj(prevState => ({...prevState, projectDescription: e.target.value}))}/>
 
                     <button className="upload-project" onClick={() => uploadProject()}>Upload Project</button>

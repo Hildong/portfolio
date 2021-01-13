@@ -7,6 +7,45 @@
     font-family: monospace;
 }
 
+.about-me-text {
+    width: 90%;
+    margin: 2vh auto;
+}
+.about-me-text h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.about-me-text p {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.about-me-hr {
+    margin-top: 5vh;
+}
+
+.tech-stack {
+    height: 50px;
+    margin-top: 3vh;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.tech-stack .left {
+    display: inline-block;
+    width: 37%;
+    margin-left: 23%;
+}
+.tech-stack .right {
+    height: 50px;
+    width: 40%;
+    display: inline-block;
+}
+
 /**/
 
 /* MOBILE ABOUT STYLING */
@@ -49,7 +88,7 @@
 /* */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 480px) and (max-width: 600px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
     .about-me-text {
         width: 90%;
         margin: 2vh auto;
@@ -80,6 +119,51 @@
     .tech-stack .right {
         height: 50px;
         width: 44%;
+        display: inline-block;
+    }
+    .about-me-hr {
+        margin-top: 2vh;
+    }
+}
+
+/* (large tablets, 768px and up) */
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+    .about-body {
+        height: 57vh;
+    }
+    .about-header {
+        padding-top: 2.5vh;
+    }
+    .about-me-text {
+        width: 90%;
+        margin: 5vh auto;
+    }
+    .about-me-text h1 {
+        font-size: 1.9rem;
+        text-align: center;
+        font-weight: 300;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .about-me-text p {
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: 300;
+        margin-top: 2vh;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .tech-stack {
+        height: 50px;
+        margin-top: 60px;
+        font-size: 1rem;
+    }
+    .tech-stack .left {
+        display: inline-block;
+        width: 30%;
+        margin-left: 29%;
+    }
+    .tech-stack .right {
+        height: 50px;
+        width: 40%;
         display: inline-block;
     }
     .about-me-hr {

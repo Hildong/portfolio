@@ -5,6 +5,15 @@
   padding: 0;
 }
 
+.content-body {
+  background-color: white;
+  display: inline-block;
+  position: relative;
+  overflow-y: scroll;
+  width: 40vw;
+  height: 47.5vh;
+}
+
 /**/
 
 
@@ -23,6 +32,7 @@
       height: 50vh;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
+      display: block;
       margin: .5vh auto;
       background-color: rgb(255, 255, 255);  
   }
@@ -34,7 +44,7 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
-@media only screen and (min-width: 480px) and (max-width: 600px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   body {
     height: 100vh;
     position: fixed;
@@ -46,6 +56,8 @@
       height: 50vh;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
+      display: block;
+
       margin: .5vh auto;
       background-color: rgb(255, 255, 255);  
   }
@@ -55,13 +67,15 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
-@media only screen and (min-width: 480px) and (max-width: 600px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   .content-body {
     z-index: 10;
     width: 97%;
     height: 48vh;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    display: block;
+
     margin: .5vh auto;
     background-color: rgb(255, 255, 255);  
   }
@@ -69,10 +83,43 @@
 
 /**/
 
+/* (large tablets, 768px and up) */
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+  .content-body {
+    z-index: 10;
+    width: 97%;
+    height: 48vh;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: block;
 
+    margin: .5vh auto;
+    background-color: rgb(255, 255, 255);  
+  }
+}
 
 /* FONTS */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 /**/
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

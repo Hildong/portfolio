@@ -1,7 +1,21 @@
 /* MY SECTION STYLING */
 
+.my-section {
+    width: 20vw;
+    height: 55vh;
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px auto;
+    border: 1px solid rgba(32, 32, 32, 0.445);
+    -webkit-box-shadow: 0px 0px 21px 5px rgba(0,0,0,0.46);
+-moz-box-shadow: 0px 0px 21px 5px rgba(0,0,0,0.46);
+box-shadow: 0px 0px 21px 5px rgba(0,0,0,0.46);
+}
+
 .picture-of-me {
     border-radius: 50%;
+    height: 100px;
+    width: 100px;
     -webkit-box-shadow: 1px 1px 5px 3px rgba(0,0,0,0.45);
     -moz-box-shadow: 1px 1px 5px 3px rgba(0,0,0,0.45);
     box-shadow: 1px 1px 5px 3px rgba(0,0,0,0.45);
@@ -25,6 +39,11 @@
     text-decoration: underline;
 }
 
+.link-img {
+    height: 50px;
+    width: 50px;
+}
+
 /**/
 
 
@@ -32,12 +51,11 @@
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
     .short-about-me {
-        height: 85%;
+        height: 90%;
         width: 60vw;
         display: inline-block;
         margin-left: 7vw;
         text-align: center;
-        border-bottom: 1px solid rgba(0,0,0,0.45);
     }
     .picture-of-me {
         height: 40%;
@@ -70,14 +88,13 @@
 /**/
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 480px) and (max-width: 600px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
     .short-about-me {
         height: 80%;
         width: 60vw;
         display: inline-block;
         margin-left: 7vw;
         text-align: center;
-        border-bottom: 1px solid rgba(0,0,0,0.45);
     }
     .picture-of-me {
         height: 45%;
@@ -87,6 +104,45 @@
     .my-section {
         width: 97vw;
         height: 45vh;
+        background-color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin: 5px auto;
+        border-bottom: 1px solid black;
+    }
+    .my-social-stuff {
+        width: 13vw;
+        height: 62%;
+        display: inline-block;
+        border-right: 1px solid rgba(0, 0, 0, 0.233);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.233);
+    }
+    .link-img {
+        width: 9.5vw;
+        height: 9.5vw;
+        margin-top: 5px;
+    }  
+}
+
+/**/
+
+/* (large tablets, 768px and up) */
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+    .short-about-me {
+        height: 80%;
+        width: 60vw;
+        display: inline-block;
+        margin-left: 7vw;
+        text-align: center;
+    }
+    .picture-of-me {
+        height: 45%;
+        width: 35%;
+        margin: 25px auto;
+    }
+    .my-section {
+        width: 97vw;
+        height: 35vh;
         background-color: white;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
